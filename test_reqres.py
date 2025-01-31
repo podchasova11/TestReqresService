@@ -34,4 +34,21 @@ def test_schema_validate_from_file():
     with open("post_users.json") as file:
         validate(body, schema=json.loads(file.read()))
 
+# Эта функция тестирует,
+# возвращается ли правильная информация о пользователе
+# после отправки запроса на создание пользователя.
+# Отправка POST-запроса: Используется метод requests.post для отправки
+# POST-запроса на URL "https://reqres.in/api/users" с данными в формате JSON.
+# Данные содержат ранее указанные name и job.
+# Получение ответа: Содержимое ответа сохраняется в переменной body, преобразуется в формат JSON.
+
+def test_job_name_from_request_returns_in_response():
+    job = "master"
+    name = "morpheus"
+
+    response = requests.post("https://reqres.in/api/users", json={"name": name, "job": job})
+    body = response.json()
+
+    assert body["name"] == name
+    assert body["job"] == job
 
