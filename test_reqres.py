@@ -10,7 +10,7 @@ url = "https://reqres.in/api/users"
 payload = {"name": "morpheus", "job": "leader"}
 # Отправка POST-запроса: Используется метод requests.request
 # для отправки POST-запроса с полезной нагрузкой. Результат запроса выводится на экран
-response = requests.("POST", url, data=payload)
+response = requests.request("POST", url, data=payload)
 
 print(response.text)
 
