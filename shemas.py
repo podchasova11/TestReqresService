@@ -24,6 +24,18 @@ post_users = {
     ]
 }
 
+post_login_success = {
 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "token": {
+            "type": "string",
+            "minLength": 1
+        }
+    },
+    "required": ["token"],
+    "additionalProperties": False
+}
 
 
