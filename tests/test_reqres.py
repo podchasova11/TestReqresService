@@ -31,7 +31,7 @@ def test_schema_validate_from_file():
     # и его содержимое интерпретируется как JSON-объект.
     # Затем осуществляется валидация body (ответа) с этим JSON-объектом
     # с использованием функции validate.
-    with open("post_users.json") as file:
+    with open("../post_users.json") as file:
         validate(body, schema=json.loads(file.read()))
 
 # Эта функция тестирует,
@@ -71,6 +71,7 @@ def test_job_name_from_request_returns_in_response():
 # странице, являются уникальными. Если длина списка идентификаторов равна длине множества,
 # значит, в ответе нет дубликатов.
 
+
 def test_get_users_returns_unique_users():
     response = requests.get(
         url="https://reqres.in/api/users",
@@ -80,3 +81,4 @@ def test_get_users_returns_unique_users():
     ids = [element["id"] for element in response.json()["data"]]
 
     assert len(ids) == len(set(ids))
+
