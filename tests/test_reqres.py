@@ -42,6 +42,7 @@ def test_schema_validate_from_file():
 # Данные содержат ранее указанные name и job.
 # Получение ответа: Содержимое ответа сохраняется в переменной body, преобразуется в формат JSON.
 
+
 def test_job_name_from_request_returns_in_response():
     job = "master"
     name = "morpheus"
@@ -52,7 +53,6 @@ def test_job_name_from_request_returns_in_response():
     assert body["name"] == name
     assert body["job"] == job
 
-#  def test_get_users_returns_unique_users()
 # Эта функция тестирует, возвращает ли сервер уникальных пользователей при запросе.
 #
 # Отправка GET-запроса: Метод requests.get используется для отправки GET-запроса
