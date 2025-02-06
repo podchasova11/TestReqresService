@@ -1,15 +1,16 @@
 import pytest
 
-REQRES_URL = "https://reqres.in"
-MY_SERVICE_URL = "http://127.0.0.1:8000"
+PROD = "https://reqres.in"
+TEST = "http://127.0.0.1:8000"
 
 USERS_API = "/api/users"
 REGISTER_API = "/api/register"
 
 
-@pytest.fixture(params=[REQRES_URL, MY_SERVICE_URL])
+@pytest.fixture(params=[PROD, TEST])
 def domain_url(request):
     return request.param
+
 
 @pytest.fixture()
 def base_endpoint(domain_url):

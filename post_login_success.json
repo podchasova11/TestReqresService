@@ -4,7 +4,7 @@
   "properties": {
     "token": {
       "type": "string",
-      "minLength": 1  // Указывает, что токен не должен быть пустым
+      "minLength": 1  //что токен не пустой
     }
   },
   "required": ["token"]
