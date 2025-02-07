@@ -2,8 +2,8 @@ from pydantic import BaseModel, EmailStr
 
 
 class User(BaseModel):
-    email: str | None = None
-    password: str | None = None
+    email: str
+    password: str
 
 
 class UserData(BaseModel):
@@ -21,6 +21,10 @@ class SupportInfo(BaseModel):
 
 class SuccessRegisterData(BaseModel):
     id: int
+    token: str
+
+
+class SuccessLoginData(BaseModel):
     token: str
 
 
