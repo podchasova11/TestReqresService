@@ -1,6 +1,5 @@
 from http import HTTPStatus
 
-import pytest
 import requests
 from data import login_user
 
