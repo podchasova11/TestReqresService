@@ -35,6 +35,11 @@ register_user = {
     "password": "pistol"
 }
 
+login_user = {
+    "email": "eve.holt@reqres.in",
+    "password": "cityslicka"
+}
+
 
 support_info = {
         "url": "https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral",
@@ -42,4 +47,5 @@ support_info = {
     }
 
 timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S")
+
 non_exist_id = 79
