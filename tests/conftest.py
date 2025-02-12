@@ -3,7 +3,7 @@ import pytest
 PROD = "https://reqres.in"
 TEST = "http://127.0.0.1:8000"
 
-USERS_API = "/api/users"
+USERS_API = "/api/users"  
 REGISTER_API = "/api/register"
 LOGIN_API = "/api/login"
 
