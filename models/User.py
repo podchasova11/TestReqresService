@@ -8,3 +8,5 @@ class User(BaseModel):
     last_name: str
     avatar: HttpUrl
 
+
+
