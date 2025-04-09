@@ -12,7 +12,6 @@ LOGIN_API = "/api/login"
 def domain_url(request):
     return request.param
 
-
 @pytest.fixture()
 def base_endpoint(domain_url):
     base_endpoint = f"{domain_url}{USERS_API}"
