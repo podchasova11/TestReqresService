@@ -40,3 +40,5 @@ def test_delete_user(base_endpoint):
     response = requests.delete(url=f"{base_endpoint[0]}/2")
 
     assert response.status_code == 204
+
+
